@@ -93,7 +93,9 @@ def readDatabase(type, value, value2,value3):
                                       password=os.getenv('PASSWORD'),
                                       host=os.getenv('HOST'),
                                       port=5432,
-                                      database=os.getenv('DATABASE'))
+                                      database=os.getenv('DATABASE'),
+                                      sslmode='require',
+                                      )
         cursor = connection.cursor()
 
         result = ''
