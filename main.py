@@ -10,7 +10,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 
 bot = commands.Bot(command_prefix='!')
 client = discord.Client()
-DATABASE_URL = os.environ['DATABASE_URL']
+DATABASE_URL = os.getenv['DATABASE_URL']
 
 @client.event
 async def on_message(message):
