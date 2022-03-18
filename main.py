@@ -10,7 +10,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 
 bot = commands.Bot(command_prefix='!')
 client = discord.Client()
-
+DATABASE_URL = os.environ['DATABASE_URL']
 
 @client.event
 async def on_message(message):
@@ -89,11 +89,7 @@ async def on_ready():
 def readDatabase(type, value, value2,value3):
     global connection
     try:
-        connection = psycopg2.connect(user=os.getenv('USER'),
-                                      password=os.getenv('PASSWORD'),
-                                      host=os.getenv('HOST'),
-                                      port=5432,
-                                      database=os.getenv('DATABASE'),
+        connection = psycopg2.connect(DATABASE_URL,
                                       sslmode='require',
                                       )
         cursor = connection.cursor()
