@@ -5,7 +5,7 @@ from discord.ext import commands
 from time import sleep
 
 
-TOKEN = os.environ('DISCORD_TOKEN')
+TOKEN = os.environ['DISCORD_TOKEN']
 
 bot = commands.Bot(command_prefix='!')
 client = discord.Client()
