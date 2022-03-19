@@ -3,14 +3,13 @@ import os
 import discord
 from discord.ext import commands
 from time import sleep
-from dotenv import load_dotenv
 
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+
+TOKEN = os.environ('DISCORD_TOKEN')
 
 bot = commands.Bot(command_prefix='!')
 client = discord.Client()
-DATABASE_URL = os.getenv['DATABASE_URL']
+DATABASE_URL = os.environ['DATABASE_URL']
 
 @client.event
 async def on_message(message):
