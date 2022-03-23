@@ -14,7 +14,7 @@ DATABASE_URL = os.environ['DATABASE_URL']
 @client.event
 async def on_message(message):
     if message.guild:
-        if not str('954448309576155167') in str(message.author.id) and str(message.channel.id) == '796211184684236860':
+        if not str('954448309576155167') in str(message.author.id) and str(message.channel.id) == '954761477657595994':
             if message.content == '!!help':
                 await message.channel.send(getHelpMessage())
             elif message.content == '!!info':
